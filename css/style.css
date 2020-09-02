@@ -1,0 +1,518 @@
+@charset "UTF-8";
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "游ゴシック","メイリオ","ヒラギノ角ゴ Pro W3";
+  color: #333;
+  margin: 0;
+  background-color: lightgray;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+@media screen and (min-width:1001px) {
+
+
+header {
+  width: 100%;
+  top:0;
+  padding-top:2em;
+  background-color:white;
+  align-items: center;
+  border-bottom: double  2px #333;
+  position: fixed;
+  display: flex;
+  z-index: 99;
+  height: 100px;
+  padding-bottom: 20px;
+}
+
+#sitelogo {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-logo {
+  width: 200px;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 24px 50px;
+}
+
+.header nav {
+  margin: 0 0 0 auto;
+  padding-right: 50px;
+}
+
+.header ul {
+  justify-content: space-between;
+  display: flex;
+  list-style: none;
+  margin: 0;
+
+}
+
+.header li {
+  margin: 0 0 0 25px;
+}
+
+.navigation li:hover {
+  border-bottom: solid 1px #aaa;
+}
+
+/*    アイキャッチ部分    */
+.eye-catch {
+  margin-top: 100px;
+}
+
+.eye-catch-section {
+  background-image: url("../img/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+
+.eye-catch .container {
+  height: 600px;
+}
+
+.eye-catch-bg {
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.eye-catch-title {
+  font-size: 80px;
+  color: white;
+  font-weight: 600;
+  padding-left: 100px;
+  padding-top:150px;
+
+}
+
+.eye-catch-description {
+  font-size: 20px;
+  color: white;
+  padding-left: 150px;
+  font-weight: bold;
+
+}
+
+
+/*    挨拶セクション   */
+
+
+
+.greeting .container {
+  height: auto;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.title-1 {
+  margin-top: 100px;
+  padding: 1rem 2rem;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.content-box {
+  width: 100%;
+  background-color: white;
+  margin: 3.5625rem auto 0;
+    padding: 2.5rem 3.33333% 2.625rem;
+}
+
+.greeting .container {
+  display: flex;
+  justify-content:
+}
+
+.greeting-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 2.5rem;
+}
+.greeting-img {
+   width: 46.428571%;
+   height: auto;
+}
+.greeting-message {
+    width: 46.428571%;
+    height: auto;
+}
+.greeting-header {
+  width: 100%;
+    height: auto;
+    margin: 0 auto 2.125rem;
+    border: 1px solid #292929;
+    padding: 0.46875rem 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    line-height: 1.45833333;
+    text-align: center;
+}
+.greeting-content {
+  margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.greeting-name {
+  position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0.6875rem;
+    font-size: 1rem;
+    color: #357944;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.greeting-history {
+  font-size: 0.875rem;
+    line-height: 1.71428571;
+}
+/*
+img {
+  width:100%;
+  margin:100px 0;
+}
+
+h3:first-letter {
+  font-size: 2em;
+  color: #333;
+}
+.message-header {
+
+}*/
+
+/*  プロフィールセクション   */
+/*
+.profile-card {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 1px 3px rgba(0,0,0,.18);
+  overflow: hidden;
+  text-align: center;
+}
+
+.profile-card:before {
+  width: 120%;
+  height: 100px;
+  content: "";
+  transform: skew(15deg,10deg);
+  background: #333;
+  position: absolute;
+  top: -15%;
+  left: 10%;
+  z-index: 0;
+}
+
+.profile-inner {
+  position: relative;
+}
+
+.profile-thumb {
+  overflow: hidden;
+  width: 110px;
+  height: 110px;
+  border: #fff 3px solid;
+  border-radius: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background: #fff;
+}
+
+.profile-thumb img {
+  display: block;
+  width:100%;
+  height: auto;
+}
+
+.profile-content {
+  padding: 15px;
+}
+
+.profile-content span {
+  display: block;
+}
+
+.profile-name {
+  margin-bottom: 3px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.profile-job {
+  margin-bottom: 10px;
+  color: #ccc;
+  font-size: 10px;
+  text-align: center;
+}
+
+.profile-info {
+  font-size: 12px;
+}
+*/
+
+/*    アピールポイント部分    */
+.title {
+   margin-top: 100px;
+   padding: 1rem 2rem;
+   border-top: 3px solid black;
+   border-bottom: 3px solid black;
+   text-align: center;
+   background-color: black;
+   color: white;
+}
+
+
+.explain {
+  width:1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  background-color: lightgray;
+
+}
+
+.explain-part {
+
+  width: 30%;
+  border: 1px solid gray;
+  text-align: center;
+  margin: 0 15px;
+  background-color: #333;
+}
+
+.explain-part:hover {
+
+  width: 30%;
+  /*border: 1px solid gray;*/
+  text-align: center;
+  margin: 0 15px;
+  background-color: #333;
+  opacity: 0.7;
+}
+
+
+.circle {
+  color: #333;
+  background-color:#fff;
+  padding: 0;
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  line-height: 100px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+.far {
+    font-size: 40px;
+    display: flex;
+    color: #333;
+}
+
+.fas {
+    font-size: 40px;
+    display: flex;
+}
+
+.explain-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+.explain-description {
+  color: white;
+  padding-bottom: 50px;
+}
+
+/*  料金セクション   */
+.price-section .container {
+  text-align: center;
+}
+/*  実績セクション   */
+
+.portfolio h1 {
+  padding: 1rem 2rem;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+.contact-wrapper {
+  margin: 0;
+}
+
+#sns {
+    background: #faf7f0;
+    padding:8px; ;
+
+    background-color:lightgray;
+}
+#sns .wrapper {
+  max-width: 1250px;
+    margin: 0 auto;
+justify-content: space-between;
+display: flex;
+}
+
+
+.sns-box{
+    width: 30%;
+    margin: 0 15px;
+    color: #333;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+#fade {
+    animation-name: fade-in2;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+
+/*    コンタクトセクション    */
+
+.contact .title {
+  margin: 0;
+}
+
+.contact-wrapper {
+  display: flex;
+  background-image: url("../img/bg.png");
+  background-size: cover;
+    background-color: lightblue;
+    font-weight: bold;
+}
+.big-bg {
+  text-align: center;
+}
+#contact {
+  padding: 5% 5%;
+  width: 50%;
+
+}
+#contact .wrapper {
+  max-width: 1250px;
+}
+
+.button-1 {
+    font-size: 1.375rem;
+    background: #00b900;
+    color: #fff;
+    border-radius: 5px;
+    padding: 18px 32px;
+}
+.button-1:hover {
+    opacity: 0.7;
+}
+
+/*      フォーム        */
+form div {
+    margin-bottom: 14px;
+}
+
+label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: lightgray;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"]
+{
+    width: 100%;
+    max-width: 240px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+}
+
+input[type="submit"]
+{
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.button {
+    font-size: 1.375rem;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 18px 32px;
+}
+.button:hover {
+    background: #0090aa;
+}
+
+
+footer {
+  height: 50px;
+  background-color: black;
+  text-align: center;
+  padding-top: 10px;
+}
+.foot-mess {
+  }
+
+}
+@media screen and (max-width:670px) {
+
+
+}
