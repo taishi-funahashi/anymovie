@@ -7,11 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <!--  スマホ版ナビの表示非表示    -->
+    <script>
+      $(function() {
+			const hum = $('#hamburger, .close')
+			const nav = $('.sp-nav')
+			hum.on('click', function(){
+				nav.toggleClass('toggle');
+			});
+		});
+    </script>
   </head>
   <body>
-    <header class="header">
-        <h1 class="sitelogo"><a href="#"><img src="img/logo.png" alt="サイトロゴ" class="header-logo"></a></h1>
-        <nav class="navigation">
+    <header>
+        <div class="sitelogo"><a href="#"><img src="img/logo.png" alt="サイトロゴ" class="header-logo"></a></div>
+        <nav class="pc-nav">
           <ul>
             <li><a href="#text1">Home</a></li>
             <li><a href="#text2">My Profile</a></li>
@@ -21,8 +34,21 @@
             <li><a href="#text6">Contact</a></li>
           </ul>
         </nav>
+        <nav class="sp-nav">
+          <ul>
+            <li><a href="#text1">Home</a></li>
+            <li><a href="#text2">My Profile</a></li>
+            <li><a href="#text3">My Concept</a></li>
+            <li><a href="#text4">Price List</a></li>
+            <li><a href="#text5">Portfolio</a></li>
+            <li><a href="#text6">Contact</a></li>
+            <li class="close"><span>閉じる</span></li>
+          </ul>
+        </nav>
+        <div id="hamburger">
+          <span></span>
+        </div>
       </div>
-
     </header>
 
     <div class="eye-catch" id="text1">
@@ -132,7 +158,7 @@
                </div><!-- /.wrapper -->
 
           </section><!-- /#sns -->
-        </div>
+       </div>
 
         <div class="portfolio">
           <h1>『広告動画』</h1>
@@ -156,7 +182,7 @@
                   </div>
                   </div><!-- /.wrapper -->
               </section><!-- /#sns -->
-            </div>
+          </div>
 
 
             <div class="contact">
