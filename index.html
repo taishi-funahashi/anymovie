@@ -14,6 +14,11 @@
     <script type="text/javascript" src="js/jquery.inview.js"></script>
     <!--  スマホ版ナビの表示非表示    -->
     <script>
+      window.onload = function(){
+        const spinner = document.getElementById('loading');
+        spinner.classList.add('loaded');
+      }
+
       $(function() {
 			const hum = $('#hamburger, .close')
 			const nav = $('.sp-nav')
@@ -41,14 +46,13 @@
   </head>
   <body>
     <header>
-      <!-- ローディング　
+      <!-- ローディング　-->
       <div id="loadng">
         <span></span>
         <span></span>
         <span></span>
         <p>loading</p>
       </div>
-	-->
 
         <div class="sitelogo"><a href="#"><img src="img/logo.png" alt="サイトロゴ" class="header-logo"></a></div>
         <nav class="pc-nav">
@@ -240,7 +244,7 @@
                     </p>
                     <img src="img/qr.PNG" alt="">
                     <p>もしくは、下記ボタンからジャンプして頂けます。</p>
-                    <a href="https://lin.ee/MuvsAUw"><img height="36" border="0" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a>
+                    <a href="https://lin.ee/MuvsAUw"><img class="linebottun" height="55" border="0" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a>
                   </div>
 
 
@@ -273,10 +277,9 @@
                 <p>下記のメールアドレスからも<br>
                     お問合せ頂けます。
                 </p>
-                <p>receive.1912@gmail.com</p>
-                <p>もしくは、下記ボタンからジャンプして頂けます。</p>
-                <a href="https://lin.ee/MuvsAUw"><img height="36" border="0" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a>
-              </div>
+                <p class="address">receive.1912@gmail.com</p>
+                <div class="button-1" data-clipboard-text="receive.1912@gmail.com"><i class="far fa-envelope"></i>  メールアドレスをコピーする</div>
+
               </div>
           </div>
         </section>
@@ -287,5 +290,20 @@
 
 
     <footer><small class="foot-mess">COPYRIGHT &#169; Any Movie All Right Reserved.</small></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- ↓クリップボード操作のために使用するjsを読み込む　( https://clipboardjs.com/ ) -->
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
+
+<script>
+var clipboard = new Clipboard('.button-1');    //clipboard.min.jsが動作する要素をクラス名で指定
+
+//クリックしたときの挙動
+$(function(){
+    $('.button-1').click(function(){
+        $(this).addClass('copied');    //ボタンの色などを変更するためにクラスを追加
+        $(this).text('コピーしました');    //テキストの書き換え
+    });
+});
+</script>
   </body>
 </html>
