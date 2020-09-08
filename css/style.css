@@ -14,6 +14,7 @@ a {
   text-decoration: none;
 }
 
+/*
 #loading{
   position: absolute;
   left: 50%;
@@ -44,6 +45,7 @@ a {
     opacity: .1;
   }
 }
+*/
 
 
 @media screen and (min-width:1001px) {
