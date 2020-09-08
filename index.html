@@ -14,10 +14,6 @@
     <script type="text/javascript" src="js/jquery.inview.js"></script>
     <!--  スマホ版ナビの表示非表示    -->
     <script>
-      window.onload = function(){
-        const spinner = document.getElementById('loading');
-        spinner.classList.add('loaded');
-      }
 
       $(function() {
 			const hum = $('#hamburger, .close')
@@ -269,7 +265,6 @@
                           <textarea id="message" name="your-message">
                           </textarea>
                       </div>
-
                       <input type="submit" value="送信" class="button">
                   </form>
                 -->
@@ -278,7 +273,22 @@
                     お問合せ頂けます。
                 </p>
                 <p class="address">receive.1912@gmail.com</p>
-                <div class="button-1" data-clipboard-text="receive.1912@gmail.com"><i class="far fa-envelope"></i>  メールアドレスをコピーする</div>
+                <!-- コピー対象要素とコピーボタン -->
+                <input id="copyTarget" type="text" value="receive.1912@gmail.com" readonly>
+                <button onclick="copyToClipboard()">コピーする</button>
+                <!-- bodyタグ内の下部に以下を入力する -->
+                <script>
+                function copyToClipboard() {
+                // コピー対象をJavaScript上で変数として定義する
+                var copyTarget = document.getElementById("copyTarget");
+                // コピー対象のテキストを選択する
+                copyTarget.select();
+                // 選択しているテキストをクリップボードにコピーする
+                document.execCommand("Copy");
+                // コピーをお知らせする
+                alert("コピーできました！ : " + copyTarget.value);
+                }
+                </script>
 
               </div>
           </div>
@@ -290,20 +300,6 @@
 
 
     <footer><small class="foot-mess">COPYRIGHT &#169; Any Movie All Right Reserved.</small></footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!-- ↓クリップボード操作のために使用するjsを読み込む　( https://clipboardjs.com/ ) -->
-<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
 
-<script>
-var clipboard = new Clipboard('.button-1');    //clipboard.min.jsが動作する要素をクラス名で指定
-
-//クリックしたときの挙動
-$(function(){
-    $('.button-1').click(function(){
-        $(this).addClass('copied');    //ボタンの色などを変更するためにクラスを追加
-        $(this).text('コピーしました');    //テキストの書き換え
-    });
-});
-</script>
   </body>
 </html>
