@@ -10,8 +10,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.inview.js"></script>
     <!--  スマホ版ナビの表示非表示    -->
     <script>
+      window.onload = function(){
+        const spinner = document.getElementById('loading');
+        spinner.classList.add('loaded');
+      }
+
       $(function() {
 			const hum = $('#hamburger, .close')
 			const nav = $('.sp-nav')
@@ -19,10 +26,34 @@
 				nav.toggleClass('toggle');
 			});
 		});
+
+    $(function(){
+      $(".inview").on("inview", function(event, isInView){
+        if (isInView) {
+          $(this).stop().addClass("is-show");
+        }
+      });
+    });
+
+    $(function(){
+      $(".inview1").on("inview", function(event, isInView){
+        if (isInView) {
+          $(this).stop().addClass("is-show1");
+        }
+      });
+    });
     </script>
   </head>
   <body>
     <header>
+      <!-- ローディング　-->
+      <div id="loadng">
+        <span></span>
+        <span></span>
+        <span></span>
+        <p>loading</p>
+      </div>
+
         <div class="sitelogo"><a href="#"><img src="img/logo.png" alt="サイトロゴ" class="header-logo"></a></div>
         <nav class="pc-nav">
           <ul>
@@ -63,7 +94,7 @@
     <div class="greeting" >
       <h1 class="title-1" id="text2">My Profile</h1>
       <div class="container">
-        <div class="content-box">
+        <div class="content-box inview">
           <div class="greeting-box">
             <div class="greeting-img">
               <figure>
@@ -72,11 +103,25 @@
             </div>
             <div class="greeting-message">
               <h3 class="greeting-header">動画の浸透と訴求力</h3>
-              <p class="greeting-content">
+              <p class="greeting-content-pc">
                 動画情報量は、文字や写真だけの場合の5000倍と言われております。
                 たくさんのYouTuberが存在し、たくさんの動画広告に溢れ、<br>
                 あらゆるクリエイターが日々、動画コンテンツを作り出しています。
                 動画作品が作り上がるまでに様々な計画と苦労は、付き物です。<br>
+                単に撮影して終わりではなく、少なくとも企画、撮影、編集が必要です。<br><br>
+                私は、初めて動画編集の受注をした時に、正直、"大変なお仕事だ"と感じました。
+                その中で、動画を制作するにあたってもっと仕組化できたら効率が上がるのではないかと
+                考えました。<br><br>
+                私ができること、、、<br>それは、動画を通して一人でも多くのクライアント様に携わって
+                クライアント様の繁栄に貢献すること。<br>
+                私は、常にクライアントファーストの精神を忘れません。
+              </p>
+
+              <p class="greeting-content-sm">
+                動画情報量は、文字や写真だけの場合の5000倍と言われております。
+                たくさんのYouTuberが存在し、たくさんの動画広告に溢れ、
+                あらゆるクリエイターが日々、動画コンテンツを作り出しています。
+                動画作品が作り上がるまでに様々な計画と苦労は、付き物です。
                 単に撮影して終わりではなく、少なくとも企画、撮影、編集が必要です。<br><br>
                 私は、初めて動画編集の受注をした時に、正直、"大変なお仕事だ"と感じました。
                 その中で、動画を制作するにあたってもっと仕組化できたら効率が上がるのではないかと
@@ -105,17 +150,17 @@
   <h1 class="title" id="text3">  My Concept </h1>
   <div class="explain">
 
-    <div class="explain-part time">
+    <div class="explain-part time inview1 fadein">
        <p class="circle"><i class="far fa-clock"></i></p>
        <p class="explain-title">納期厳守</p>
        <p class="explain-description">納期を守ることはもちろん、<br>最短一日で納品のプランもご用意しています</p>
     </div>
-    <div class="explain-part price">
+    <div class="explain-part price inview1 fadein">
        <p class="circle"><i class="fas fa-yen-sign"></i></p>
        <p class="explain-title">最適な料金設定</p>
        <p class="explain-description">料金体系はお客様に１番見合ったものを提案します</p>
     </div>
-    <div class="explain-part idea">
+    <div class="explain-part idea inview1 fadein">
        <p class="circle"><i class="fas fa-lightbulb"></i></p>
        <p class="explain-title">豊富なアイデア</p>
        <p class="explain-description">マンガ風、広告風、様々なジャンルに対応可能です。お気軽に制作したい動画をお伝えください</p>
@@ -209,6 +254,7 @@
             <div id="contact" >
               <div class="wrapper">
                   <h1 class="page-title">メールでお問合せ</h1>
+                  <!--  フォーム実装錯誤中
                   <form action="mail.php">
                       <div>
                           <label for="name">your name</label>
@@ -226,6 +272,15 @@
 
                       <input type="submit" value="送信" class="button">
                   </form>
+                -->
+                <div class="line-section">
+                <p>下記のメールアドレスからも<br>
+                    お問合せ頂けます。
+                </p>
+                <p>receive.1912@gmail.com</p>
+                <p>もしくは、下記ボタンからジャンプして頂けます。</p>
+                <a href="https://lin.ee/MuvsAUw"><img height="36" border="0" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"></a>
+              </div>
               </div>
           </div>
         </section>
