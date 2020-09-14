@@ -232,7 +232,7 @@ header img {
 
 .is-show1 {
     opacity: 1;
-    transition: 1s;
+    transition: 3s;
 }
 /*@keyframes fadein {
   100%{
@@ -648,12 +648,17 @@ eye-catch img {
 .eye-catch-description {
   margin-top: 270px;;
   display: inline-block;
+  border: 5px solid #333;
+  padding: 10px;
+  border-radius: 2px;
+  background: black;
+  opacity: 0.8;
 
 }
 
 .eye-catch-description p {
   font-size:20px;
-  color: black;
+  color: white;
   font-weight: bold;
   margin: 0;
   padding: 0;
